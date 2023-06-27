@@ -3,7 +3,7 @@ import websockets
 import asyncio
 
 # Server data
-PORT = 7890
+PORT = 4567
 print("Server listening on Port " + str(PORT))
 
 # A set of connected ws clients
@@ -11,7 +11,7 @@ connected = set()
 
 # The main behavior function for this server
 async def echo(websocket, path):
-    print("A client just connected")
+    print("A client just connected.")
     # Store a copy of the connected client
     connected.add(websocket)
     # Handle incoming messages
